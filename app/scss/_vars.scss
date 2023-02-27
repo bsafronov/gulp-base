@@ -1,0 +1,71 @@
+$title-color: #363838;
+$main-color: #5A5A5A;
+$yellow-color: #FFEF35;
+$link-color: #707070;
+
+@mixin xl-title {
+  font-family: 'Montserrat';
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 80px;
+  color: $title-color;
+}
+
+@mixin m-title {
+  font-family: 'Montserrat';
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 51px;
+  color: $title-color;
+}
+
+@mixin s-title {
+  font-family: 'Montserrat';
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  color: $title-color;
+}
+
+@mixin line {
+  transition: all .5s;
+  height: 3px;
+  background: $title-color;
+  border-radius: 5px;
+}
+
+@mixin link {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 28px;
+  color: $link-color;
+}
+
+@mixin underline {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -25px;
+  width: 50%;
+  height: 1px;
+  background: #6D7278;
+}
+
+@mixin blend($blendOpacity: .7, $blendColor: #fff) {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: rgba($blendColor, $blendOpacity);
+}
+
+@mixin animation ($animName, $animDuration: 2s, $animDelay: 0ms, $animCount: infinite, $animFunction: ease) {
+  animation-name: $animName;
+  animation-iteration-count: $animCount;
+  animation-duration: $animDuration;
+  animation-delay: $animDelay;
+  animation-timing-function: $animFunction;
+}

@@ -1,0 +1,23 @@
+@keyframes linkShake {
+  from {
+    transform: translate(0);
+  }
+  5% {
+    transform: translate(-10%);
+  }
+  10% {
+    transform: translate(10%);
+  }
+  15% {
+    transform: translate(-10%);
+  }
+  20% {
+    transform: translate(10%);
+  }
+  25% {
+    transform: translate(0);
+  }
+  to {
+    transform: translate(0%);
+  }
+}

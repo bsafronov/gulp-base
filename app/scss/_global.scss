@@ -1,0 +1,76 @@
+$container-width: 1140px;
+$container-padding: 15px;
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+}
+
+body {
+  font-family: 'OpenSans';
+  font-weight: 400;
+  line-height: 27px;
+  font-size: 16px;
+  overflow-x: hidden;
+  position: relative;
+  overflow-y: overlay;
+
+  &::-webkit-scrollbar {
+    background-color: rgba(#eee, .2);
+    width: 7px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(#707070, .5);
+    border-radius: 21px;
+  }
+}
+
+.scrollHidden {
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.none {
+  display: none;
+}
+
+.container {
+  max-width: $container-width;
+  padding: 0 $container-padding;
+  margin: 0 auto;
+}
+
+.container-left {
+  padding-right: calc((100% - $container-width) / 2);
+  padding-left: $container-padding;
+}
+
+.container-right {
+  padding-left: calc((100% - $container-width) / 2);
+  padding-right: $container-padding;
+}
+
+.container-big {
+  max-width: 1868px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex: 0 0 auto;
+}
